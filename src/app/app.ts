@@ -1,9 +1,10 @@
-import { Component, signal } from '@angular/core';
-import {Figura} from './components/figura/figura';
+import { Component } from '@angular/core';
+import { Figura } from './components/figura/figura';
+import { Circulo } from './components/circulo/circulo';
 
 @Component({
   selector: 'app-root',
-  imports: [Figura],
+  imports: [Figura, Circulo],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

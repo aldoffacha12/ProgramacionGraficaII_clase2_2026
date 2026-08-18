@@ -1,4 +1,4 @@
-<h1>Editor Figura</h1>
+<h1>Editor Circulo</h1>
 
 <div class="panel-valores">
   <p><strong>Posicion X:</strong> {{ posicionX }}</p>
@@ -6,12 +6,14 @@
   <p><strong>Tamano:</strong> {{ tamano }}</p>
   <p><strong>Color:</strong> {{ color }}</p>
   <p><strong>Visible:</strong> {{ visible }}</p>
+  <p><strong>Direccion X:</strong> {{ irDerecha ? 'Derecha' : 'Izquierda' }}</p>
+  <p><strong>Direccion Y:</strong> {{ irAbajo ? 'Abajo' : 'Arriba' }}</p>
 </div>
 
 <div class="lienzo">
   <div
     *ngIf="visible"
-    class="figura"
+    class="circulo"
     [style.left.px]="posicionX"
     [style.top.px]="posicionY"
     [style.width.px]="tamano"
@@ -31,6 +33,20 @@
 </div>
 
 <div class="controles">
+  <h3>Diagonal</h3>
+  <div>
+    <button (click)="moverDiagonalArribaIzquierda()">↖</button>
+    <button (click)="moverDiagonalArribaDerecha()">↗</button>
+  </div>
+  <div>
+    <button (click)="moverDiagonalAbajoIzquierda()">↙</button>
+    <button (click)="moverDiagonalAbajoDerecha()">↘</button>
+  </div>
+  <button (click)="cambiarDireccionX()">Cambiar X</button>
+  <button (click)="cambiarDireccionY()">Cambiar Y</button>
+</div>
+
+<div class="controles">
   <h3>Tamano</h3>
   <button (click)="agrandar()">+ Agrandar</button>
   <button (click)="achicar()">- Achicar</button>
@@ -38,8 +54,8 @@
 
 <div class="controles">
   <h3>Color</h3>
-  <button (click)="cambiarColor('#ff6b6b')" class="rojo"></button>
-  <button (click)="cambiarColor('#4dabf7')" class="azul"></button>
+  <button (click)="cambiarColor('#ffff06')" class="amarillo"></button>
+  <button (click)="cambiarColor('#00f175')" class="verde"></button>
 </div>
 
 <div class="controles">

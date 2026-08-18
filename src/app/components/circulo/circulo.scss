@@ -19,9 +19,9 @@
   margin-bottom: 16px;
 }
 
-.figura {
+.circulo {
   position: absolute;
-  border-radius: 8px;
+  border-radius: 50%;
   transition: all 0.2s ease;
 }
 
@@ -43,6 +43,7 @@
     color: white;
   }
 
-  .rojo { background: #ff6b6b; }
-  .azul { background: #4dabf7; }
+  .rojo { background: #ffff06; }
+  .azul { background: #00f175; }
+
 }

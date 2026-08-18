@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import {CommonModule} from '@angular/common';
-
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-figura',
@@ -9,37 +8,43 @@ import {CommonModule} from '@angular/common';
   styleUrl: './figura.scss',
 })
 export class Figura {
-posicionX: number = 100;
-posicionY: number = 100;
-tamano: number = 80;
-color : string = '#ff6b6b';
-visible: boolean = true;
+  posicionX: number = 100;
+  posicionY: number = 100;
+  tamano: number = 80;
+  color: string = '#ffff06';
+  visible: boolean = true;
 
-moverDerecha():void{
-  this.posicionX += 20;
-}
-  moverIzquierda():void{
+  moverDerecha(): void {
+    this.posicionX += 20;
+  }
+
+  moverIzquierda(): void {
     this.posicionX -= 20;
   }
-  moverArriba():void{
+
+  moverArriba(): void {
     this.posicionY -= 20;
   }
-  moverAbajo():void{
+
+  moverAbajo(): void {
     this.posicionY += 20;
   }
 
-  agrandar():void{
-  this.tamano += 10;
+  agrandar(): void {
+    this.tamano += 10;
   }
-  achicar():void{
-  if (this.tamano > 20){
-    this.tamano -=10;
+
+  achicar(): void {
+    if (this.tamano > 20) {
+      this.tamano -= 10;
+    }
   }
+
+  cambiarColor(nuevoColor: string): void {
+    this.color = nuevoColor;
   }
-  cambiarColor(nuevoColor: string):void{
-  this.color = nuevoColor;
-  }
-  alternarVisibilidad():void{
-  this.visible = !this.visible;
+
+  alternarVisibilidad(): void {
+    this.visible = !this.visible;
   }
 }
