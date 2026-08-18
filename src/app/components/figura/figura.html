@@ -1,0 +1,40 @@
+<h1>Editor Figura</h1>
+<app-figura></app-figura>
+<div class="lienzo">
+ <div
+ class="figura"
+ [style.left.px]="posicionX"
+ [style.top.px]="posicionY"
+ [style.width.px]="tamano"
+ [style.height.px]="tamano"
+ [style.background]="color">
+ </div>
+</div>
+
+<div class="controles">
+  <h3>Ubicacion</h3>
+  <button (click)="moverArriba()"></button>
+  <div>
+    <button (click)="moverIzquierda()"></button>
+    <button (click)="moverDerecha()"></button>
+  </div>
+  <button (click)="moverAbajo()"></button>
+</div>
+<div class="controles">
+  <h3>Tamaño</h3>
+  <button (click)="agrandar()"> + Agrandar</button>
+  <button (click)="achicar()"> - Achicar</button>
+</div>
+
+<div class="controles">
+  <h3>Color</h3>
+  <button (click)="cambiarColor('#ff6b6b')" class="rojo"> </button>
+  <button (click)="cambiarColor('#4dabf7')" class="azul"> </button>
+</div>
+
+<div class="controles">
+  <h3>Visibilidad</h3>
+  <button (click)="alternarVisibilidad()">
+    {{visible ? 'ocultar' : 'mostrar'}}
+</button>
+</div>

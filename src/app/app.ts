@@ -1,11 +1,11 @@
 import { Component, signal } from '@angular/core';
+import {Figura} from './components/figura/figura';
 
 @Component({
   selector: 'app-root',
-  imports: [],
+  imports: [Figura],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
 export class App {
-  protected readonly title = signal('editor-figura');
 }
